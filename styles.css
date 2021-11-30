@@ -79,3 +79,27 @@ button {
 button:hover {
     box-shadow: 0 0 20px #caf0f8;
 }
+
+@media only screen and (max-width: 700px) {
+
+    * {
+        color: red;
+    }
+
+    body {
+        background-color: silver;
+    }
+
+    .content {
+        background-color: green;
+    }
+
+    button {
+        background-color: red;
+    }
+    
+    .section {
+        background-color: silver;
+    }
+
+}
