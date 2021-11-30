@@ -40,6 +40,7 @@ search.addEventListener('click', () => {
     const getSatelliteData = async () => {
 
         const satelliteData = await getgeocodingData()
+        console.log(satelliteData)
         culmination.innerText = satelliteData[0].culmination.utc_datetime
         rise.innerText = satelliteData[0].rise.utc_datetime
         set.innerText = satelliteData[0].set.utc_datetime
