@@ -102,4 +102,9 @@ button:hover {
         background-color: silver;
     }
 
+    #sectionOne {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
