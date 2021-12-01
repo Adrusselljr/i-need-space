@@ -30,6 +30,8 @@ search.addEventListener('click', () => {
         // Get geocoding promise
         const geocodingData = await geocodingRequest()
         console.log(geocodingData)
+
+        // Get coordinates
         const lat = geocodingData.features[0].geometry.coordinates[1]
         const lon = geocodingData.features[0].geometry.coordinates[0]
         console.log(`lon: ${lon}, lat: ${lat}`)
@@ -47,6 +49,8 @@ search.addEventListener('click', () => {
         // Get satellite promise
         const satelliteData = await getgeocodingData()
         console.log(satelliteData)
+        
+        // Set date/time outputs
         culmination.innerText = satelliteData[0].culmination.utc_datetime
         rise.innerText = satelliteData[0].rise.utc_datetime
         set.innerText = satelliteData[0].set.utc_datetime
