@@ -28,7 +28,7 @@ search.addEventListener('click', () => {
         const geocodingData = await geocodingRequest()
         const lat = geocodingData.features[0].geometry.coordinates[1]
         const lon = geocodingData.features[0].geometry.coordinates[0]
-        console.log(`lat: ${lat}, lon: ${lon}`)
+        console.log(`lon: ${lon}, lat: ${lat}`)
         
         const satelliteUrl = `https://satellites.fly.dev/passes/${norad.value}?lat=${lat}&lon=${lon}&limit=1&days=15&visible_only=true`
         const httpResponse = await fetch(satelliteUrl)
