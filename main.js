@@ -26,6 +26,7 @@ search.addEventListener('click', () => {
     const getgeocodingData = async () => {
 
         const geocodingData = await geocodingRequest()
+        console.log(geocodingData)
         const lat = geocodingData.features[0].geometry.coordinates[1]
         const lon = geocodingData.features[0].geometry.coordinates[0]
         console.log(`lon: ${lon}, lat: ${lat}`)
